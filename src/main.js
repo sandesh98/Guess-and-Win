@@ -6,6 +6,7 @@ import Team from './components/Team.vue'
 import Intro from './components/Intro.vue'
 import Switch from './components/Switch.vue'
 import Turn from './components/Turn.vue'
+import Words from './components/Words.vue'
 
 Vue.config.productionTip = false
 
@@ -16,7 +17,8 @@ const routes = [
   { path: '/team', component: Team },
   { path: '/intro', component: Intro },
   { path: '/switch', component: Switch },
-  { path: '/turn', component: Turn}
+  { path: '/turn', component: Turn},
+  { path: '/words', component: Words}
 ]
 
 const router = new VueRouter({
