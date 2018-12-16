@@ -1,0 +1,52 @@
+body, html {
+    font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; 
+    margin: 0;
+    padding: 0;
+}
+/* Declare background color per page */
+body.home {
+    background: #4E39F5;
+}
+
+body.team {
+    background: #FF7329;
+}
+
+body.intro {
+    background: #9021FF;
+}
+
+body.switch {
+    background: #58FFAC;
+}
+
+body.turnpage {
+    background: #FF4141;
+}
+
+.shadow {
+    text-shadow: 4.5px 4.5px 4px rgba(0, 0, 0, 0.17);
+}
+
+
+button {
+    font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
+    padding: 30px 20px 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* Header */
+
+header {
+    margin: 50px auto;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+header > h1 {
+    font-size: 4em;
+}
+
