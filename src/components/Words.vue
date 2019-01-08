@@ -62,7 +62,7 @@ export default {
         },
         moveOn() {
             this.$router.nextTeam();
-            this.$router.push('/switch');
+            this.$router.push('/countdown');
         }
     },
 

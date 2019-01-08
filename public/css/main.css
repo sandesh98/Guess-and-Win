@@ -28,6 +28,10 @@ body.words {
     background: #12ADFF;
 }
 
+body.countdown {
+    background: #20D6BA;
+}
+
 .shadow {
     text-shadow: 4.5px 4.5px 4px rgba(0, 0, 0, 0.17);
 }
