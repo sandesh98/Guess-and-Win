@@ -24,6 +24,10 @@ body.turnpage {
     background: #FF4141;
 }
 
+body.words {
+    background: #12ADFF;
+}
+
 .shadow {
     text-shadow: 4.5px 4.5px 4px rgba(0, 0, 0, 0.17);
 }
@@ -50,3 +54,6 @@ header > h1 {
     font-size: 4em;
 }
 
+#blips .progress-bar {
+    transition: width 1s linear;
+}

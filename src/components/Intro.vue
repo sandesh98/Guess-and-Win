@@ -4,7 +4,7 @@
             <h1 class="shadow">Guess and win</h1>
         </header>
         <h2 class="subtitle">
-            Jullie hebben gekozen om met 4 teams te spelen. <br>
+            Jullie hebben gekozen om met {{ this.$router.teamSize }} teams te spelen. <br>
             Pak de volgende kleuren pionnen:
         </h2>
         <div class="row">
@@ -14,10 +14,10 @@
             <div class="col-lg-3">
                 <div class="card green card-shadow"></div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3" v-if="this.$router.teamSize > 2">
                 <div class="card blue card-shadow"></div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3" v-if="this.$router.teamSize > 3">
                 <div class="card red card-shadow"></div>
             </div>
         </div>
@@ -39,6 +39,10 @@ export default{
         switchPage() {
             this.$router.push('switch')
         }
+    },
+
+    beforeDestroy() {
+        document.body.removeEventListener("click", this.switchPage)
     }
 }
 </script>

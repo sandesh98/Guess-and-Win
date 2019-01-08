@@ -3,8 +3,8 @@
         <header>
             <h1 class="shadow">Guess and win</h1>
         </header>
-        <h1 class="text-center switch-h1-text shadow">Team 2 groen is aan de beurt...</h1>
-        <h2 class="text-center footer-text">Klik op het scherm om verder te gaan.</h2>
+        <h1 class="text-center switch-h1-text shadow">Team {{ this.$router.curTeam.name }} is aan de beurt...</h1>
+        <h2 class="text-center footer-text shadow">Klik op het scherm om verder te gaan.</h2>
     </div>
 </template>
 
@@ -22,6 +22,10 @@ export default {
         introPage() {
             this.$router.push('turn')
         }
+    },
+
+    beforeDestroy() {
+        document.body.removeEventListener("click", this.introPage)
     }
 }
 </script>

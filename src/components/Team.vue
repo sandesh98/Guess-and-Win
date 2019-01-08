@@ -8,13 +8,13 @@
                 <h1 class="shadow team-h1-text">Hoeveel teams spelen er?</h1>
                 <div class="row">
                     <div class="col-lg-4">
-                        <router-link to="/intro" tag="button" class="font-impact">2</router-link>
+                        <button @click="selectTeamSize(2)" class="font-impact">2</button>
                     </div>
                     <div class="col-lg-4">
-                        <router-link to="/intro" tag="button" class="font-impact">3</router-link>
+                        <button @click="selectTeamSize(3)" class="font-impact">3</button>
                     </div>
                     <div class="col-lg-4">
-                        <router-link to="/intro" tag="button" class="font-impact">4</router-link>
+                        <button @click="selectTeamSize(4)" class="font-impact">4</button>
                     </div>
                 </div>
             </div>
@@ -24,17 +24,17 @@
 
 <script>
 export default {
-    data: function() {
-        return {
-            team:[]
-        }
-    },
-
     beforeCreate: function() {
         document.body.className = 'team';
     },
     methods: {
+        selectTeamSize(size) {
+            let teams = this.$router.teams;
 
+            this.$router.teams = teams.slice(-teams.length, size)
+            this.$router.teamSize = this.$router.teams.length
+            this.$router.push('/intro');
+        }
     }
 }
 </script>

@@ -10,8 +10,19 @@
 
 <script>
 export default {
+    mounted: function() {
+        document.body.addEventListener("click", this.wordsPage)
+    },
+
     beforeCreate: function() {
         document.body.className = 'turnpage'
+    },
+
+    methods: {
+        wordsPage() {
+            document.body.removeEventListener("click", this.wordsPage)
+            this.$router.push('words');
+        }
     }
 }
 </script>
