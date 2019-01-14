@@ -32,6 +32,18 @@ body.countdown {
     background: #20D6BA;
 }
 
+body.dice {
+    background: #FFCE00;
+}
+
+body.steps {
+    background: #E84FFC;
+}
+
+body.final {
+    background: #62FC80;
+}
+
 .shadow {
     text-shadow: 4.5px 4.5px 4px rgba(0, 0, 0, 0.17);
 }

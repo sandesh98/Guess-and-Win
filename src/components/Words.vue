@@ -24,8 +24,12 @@
 </template>
 
 <script>
-export default {
+const shuffleArray = arr => arr
+        .map(a => [Math.random(), a])
+        .sort((a, b) => a[0] - b[0])
+        .map(a => a[1]);
 
+export default {
     mounted() {
         let ctr = 0;
         let max = 5;
@@ -44,12 +48,19 @@ export default {
 
     data: function() {
         return {
-            words: ['sandesh', 'nissan', 'londen eye', 'Zwitserland', 'Bitcoin']
+            words: []
         }
     },
 
     beforeCreate: function() {
         document.body.className = 'words'
+    },
+
+    created() {
+        let words = this.$router.words;
+        words = shuffleArray(words);
+
+        this.words = words.slice(0, 5);
     },
 
     methods: {
@@ -61,7 +72,7 @@ export default {
             console.log(this.$router.teams)
         },
         moveOn() {
-            this.$router.nextTeam();
+            // this.$router.nextTeam();
             this.$router.push('/countdown');
         }
     },
