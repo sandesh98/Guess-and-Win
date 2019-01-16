@@ -3,7 +3,7 @@
         <header>
             <h1 class="shadow">Guess and win</h1>
         </header>
-        <h1 class="text-center final-h1-text shadow">🎉 Gefiliciteerd! 🎉</h1>
+        <h1 class="text-center final-h1-text shadow">🎉 Gefeliciteerd! 🎉</h1>
         <h1 class="text-center final-h1-text shadow">Team {{ this.$router.curTeam.name }} heeft gewonnen</h1>
     </div>
 </template>

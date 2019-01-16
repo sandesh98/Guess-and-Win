@@ -35,7 +35,8 @@ export default {
 
     methods: {
         nextPage() {
-            if (this.$router.curTeam.score >= 8) {
+            let steps = 34;
+            if (this.$router.curTeam.score >= steps) {
                 this.$router.push('/final');
 
                 return;
