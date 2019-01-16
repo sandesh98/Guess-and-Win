@@ -32,7 +32,7 @@ const shuffleArray = arr => arr
 export default {
     mounted() {
         let ctr = 0;
-        let max = 5;
+        let max = 30;
         let perc = (100 / max);
 
         this.timer = setInterval(() => {
