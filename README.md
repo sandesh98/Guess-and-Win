@@ -1,4 +1,4 @@
-# namst
+# Guess and Win
 
 ## Project setup
 ```
