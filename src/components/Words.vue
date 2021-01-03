@@ -69,7 +69,7 @@ export default {
             this.$router.curTeam.guessed++;
             word.classList.add('disabled-word');
 
-            console.log(this.$router.teams)
+            // console.log(this.$router.teams)
         },
         moveOn() {
             // this.$router.nextTeam();
